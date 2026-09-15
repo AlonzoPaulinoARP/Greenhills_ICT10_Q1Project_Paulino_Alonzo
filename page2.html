@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: SKEW Generator</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm" style="background-color: #010d69;">
+        <div class="container-fluid">
+             <a href="index.html" class="navbar-brand"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJyJnU-UcpvUfGfEBXQdWXpAh_oNSe8qUGuNFzOTIjw&s=10" alt="Dashboard" width="50px" height="50px"></a>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <form class="d-flex">
+                    <div class="button-container">
+                        <a href="index.html" class="nav-link"><button type="button" class="btn form-control me-2" style="background-color: #39d6fe;">Receipt Generator</button></a>
+                        <a href="#" class="nav-link"><button type="button" class="btn form-control me-2" style="background-color: #39d6fe;">SKU Generator</button></a>
+                    </div>   
+                </form>
+            </div>
+        </div>
+    </nav>
+    <h1>Receipt Generator</h1>
+    <br><br><br>
+    <div class="box">
+        <h1>SKU Generator</h1>
+        <label>Menu</label><br><br>
+            <label>Food Category</label><br>
+            <select id="category">
+                <option value="PERISH">Perishable</option>
+                <option value="SEMI">Semi-Perishable</option>
+                <option value="NON">Non-Perishable</option>
+            </select><br><br>
+            <label>Product Name</label><br>
+            <input type="text" id="name" value=""><br><br>
+            <label>Stock Quantity</label><br>
+            <input type="number" id="stock" value=""><br><br>
+            <button type="button" class="btn btn-primary" py-click="create_sku">Create SKU</button>
+            <button type="button" class="btn btn-danger" py-click="clear_sku">Clear SKU</button>
+    </div>
+    <br><div id="show" class="box"></div>
+    <py-script src="page2.py"></py-script><br><br><br>
+    <footer class="footer-custom text-light pt-4 pb-2" style="background-color: rgb(4, 0, 129, 0.6); text-align: center;">
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <p>Receipt Generator - 1st Quarter Project</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
